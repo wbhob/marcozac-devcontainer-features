@@ -1,0 +1,23 @@
+* text=auto
+
+# Documents
+*.md            text diff=markdown
+AUTHORS         text
+CHANGELOG       text
+CHANGES         text
+CONTRIBUTING    text
+LICENSE         text
+
+# Serialisation
+*.json    text
+*.yml     text
+*.yaml    text
+
+# Scripts
+*.sh    text eol=lf
+
+# Misc
+.editorconfig     text export-ignore
+.gitattributes    text export-ignore
+.gitignore        text export-ignore
+.gitkeep          text export-ignore
