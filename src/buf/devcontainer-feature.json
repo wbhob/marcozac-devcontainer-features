@@ -12,6 +12,16 @@
             ],
             "default": "latest",
             "description": "Select or enter a Buf version."
+        },
+        "installProtocGenBufBreaking": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install also protoc-gen-buf-breaking"
+        },
+        "installProtocGenBufLint": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install also protoc-gen-buf-lint"
         }
     },
     "installsAfter": [
