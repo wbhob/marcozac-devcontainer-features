@@ -6,7 +6,9 @@ This repository provides the following [Development Container](https://container
 
 | Feature | Version | Description |
 | ------- | ------- | ----------- |
-| [buf](./src/buf/README.md) | 1.0.0 | The Buf CLI enables building and management of Protobuf APIs |
+{{- range $feature := . }}
+| [{{ $feature.ID }}](./src/{{ $feature.ID }}/README.md) | {{ $feature.Version }} | {{ $feature.Description }} |
+{{- end }}
 
 ## Usage
 
@@ -16,7 +18,11 @@ To use this features, add them in your `devcontainer.json` as in the example bel
 {
     "image": "mcr.microsoft.com/devcontainers/base:debian",
     "features": {
-        "ghcr.io/marcozac/devcontainer-features/buf:1": {}
+    {{- $fl := len . }}
+    {{- range $i, $feature := . }}
+        "ghcr.io/marcozac/devcontainer-features/{{ $feature.ID }}:{{ $feature.MajorVersion }}": {}
+        {{- if lt $i (sub $fl 1) }},{{ end }}
+    {{- end }}
     }
 }
 ```
@@ -27,7 +33,9 @@ As in the [`devcontainers/features`](https://github.com/devcontainers/features) 
 
 ```
 ├── src
-│   ├── buf
+{{- range $feature := . }}
+│   ├── {{ $feature.ID }}
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
+{{- end }}
 ```
