@@ -1,0 +1,33 @@
+{
+  "test_defaults_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "atlas": {}
+    }
+  },
+  "test_version_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "atlas": {
+        "version": "v0.12.0"
+      }
+    }
+  },
+  "test_eula_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "atlas": {
+        "communityEdition": false
+      }
+    }
+  },
+  "test_version_eula_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "atlas": {
+        "version": "v0.12.0",
+        "communityEdition": false
+      }
+    }
+  }
+}
