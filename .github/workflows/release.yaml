@@ -18,6 +18,11 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
+        # Required for main README.md to be updated
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: 'go.mod'
       - name: 'Publish Features'
         uses: devcontainers/action@v1
         with:
@@ -26,6 +31,8 @@ jobs:
           generate-docs: 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Generate repo README.md'
+        run: go generate ./...
       - name: Create PR for Documentation
         id: push_image_info
         env:
@@ -41,7 +48,7 @@ jobs:
           git checkout -b $branch
           message='Automated documentation update'
           # Add / update and commit
-          git add */**/README.md
+          git add README.md */**/README.md
           git commit -m 'Automated documentation update [skip ci]' || export NO_UPDATES=true
           # Push
           if [ "$NO_UPDATES" != "true" ] ; then
