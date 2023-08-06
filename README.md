@@ -12,7 +12,7 @@ This repository provides the following [Development Container](https://container
 
 To use this features, add them in your `devcontainer.json` as in the example below.
 
-```jsonc
+```json
 {
     "image": "mcr.microsoft.com/devcontainers/base:debian",
     "features": {
@@ -31,3 +31,7 @@ As in the [`devcontainers/features`](https://github.com/devcontainers/features) 
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
 ```
+
+### Note
+
+:warning: This file is auto-generated. Do not edit it manually.
