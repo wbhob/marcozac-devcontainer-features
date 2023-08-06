@@ -31,11 +31,14 @@ build_from_source() {
     mv "$(/usr/local/go/bin/go env GOPATH)/bin/atlas" /usr/local/bin
 }
 
-[ "$COMMUNITY_EDITION" == "true" ] && ATLAS_FLAVOR="community"
-if [ "$COMMUNITY_EDITION" == "true" ] && [ "$ATLAS_VERSION" != "latest" ]; then
-    echo "Community edition binaries are only available for the latest version"
-    echo "Building from source..."
-    build_from_source
+if [ "$COMMUNITY_EDITION" == "true" ]; then
+    if [ "$ATLAS_VERSION" != "latest" ]; then
+        echo "Community edition binaries are only available for the latest version"
+        echo "Building from source..."
+        build_from_source
+    else
+        source ./atlas.sh -y --community
+    fi
 else
     source ./atlas.sh -y
 fi

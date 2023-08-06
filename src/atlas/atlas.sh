@@ -15,8 +15,6 @@ C_VERSION="0.2.0"
 C_FLAVOR_COMMUNITY="community"
 C_DEFAULT_ATLAS_INSTALL_PATH="/usr/local/bin/atlas"
 
-ATLAS_FLAVOR="${ATLAS_FLAVOR:-$C_FLAVOR_COMMUNITY}"
-
 main() {
     # Prerequisites
     need_cmd uname
@@ -118,8 +116,6 @@ main() {
     local _file="atlas"
     if [ "$_community" = true ]; then
         _file="$_file-$C_FLAVOR_COMMUNITY"
-    elif [ "$ATLAS_FLAVOR" != "$C_FLAVOR_COMMUNITY" ]; then
-        _file="$_file-$ATLAS_FLAVOR"
     fi
     _file="$_file-$_platform-$ATLAS_VERSION"
     local _url="$ATLAS_UPDATE_SRV/$_file"
@@ -297,7 +293,6 @@ Options:
 
 Environment:
     ATLAS_VERSION  Set the version to install (default: 'latest')
-    ATLAS_FLAVOR   Set the flavor to install (default: 'community')
     CI             Disables prompting for CI systems
 "
     exit 0

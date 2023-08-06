@@ -4,7 +4,7 @@ set -e
 
 source dev-container-features-test-lib
 
-check "Check Atlas EULA release" atlas version | grep -v community
-check "Check Atlas version" atlas version | grep "v0.12.0"
+check "Check Atlas version: versioned EULA release - License" atlas version | grep -v community
+check "Check Atlas version: versioned EULA release - Version" atlas version | grep "v0.12.0"
 
 reportResults
