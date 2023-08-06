@@ -1,0 +1,28 @@
+{
+    "id": "atlas",
+    "version": "1.0.0",
+    "name": "Atlas CLI",
+    "description": "[Atlas](https://atlasgo.io) is a language-independent tool for managing and migrating database schemas using modern DevOps principles.",
+    "documentationURL": "https://github.com/marcozac/devcontainer-features/tree/main/src/atlas",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter an Atlas version."
+        },
+        "communityEdition": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install the Community Edition of Atlas building from source."
+        },
+        "goVersion": {
+            "type": "string",
+            "proposals": ["1.20.7"],
+            "default": "1.20.7",
+            "description": "The Go version to use to build a specific (community edition) version of the Atlas CLI"
+        }
+    }
+}
