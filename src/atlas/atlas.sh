@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Copyright 2021-present The Atlas Authors. All rights reserved.
-# Source: https://atlasgo.sh/
-
 # This is a little script that can be downloaded from the internet to install the Atlas CLI.
 # It attempts to determine architecture and distribution to download and install the correct binary.
 # It runs on most Unix shells like {a,ba,da,k,z}sh.
@@ -18,7 +15,7 @@ C_VERSION="0.2.0"
 C_FLAVOR_COMMUNITY="community"
 C_DEFAULT_ATLAS_INSTALL_PATH="/usr/local/bin/atlas"
 
-ATLAS_FLAVOR="${ATLAS_FLAVOR:-""}"
+ATLAS_FLAVOR="${ATLAS_FLAVOR:-$C_FLAVOR_COMMUNITY}"
 
 main() {
     # Prerequisites
@@ -119,9 +116,9 @@ main() {
 
     # Build filename and download path.
     local _file="atlas"
-    if [ "$_community" = true ] || [ "$ATLAS_FLAVOR" = "$C_FLAVOR_COMMUNITY" ]; then
+    if [ "$_community" = true ]; then
         _file="$_file-$C_FLAVOR_COMMUNITY"
-    elif [ "$ATLAS_FLAVOR" != "" ]; then
+    elif [ "$ATLAS_FLAVOR" != "$C_FLAVOR_COMMUNITY" ]; then
         _file="$_file-$ATLAS_FLAVOR"
     fi
     _file="$_file-$_platform-$ATLAS_VERSION"
