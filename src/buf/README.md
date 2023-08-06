@@ -1,5 +1,5 @@
 
-# Buf CLI (buf)
+# Buf CLI (via Github Releases) (buf)
 
 The Buf CLI enables building and management of Protobuf APIs
 
@@ -19,6 +19,9 @@ The Buf CLI enables building and management of Protobuf APIs
 | installProtocGenBufBreaking | Install also protoc-gen-buf-breaking | boolean | true |
 | installProtocGenBufLint | Install also protoc-gen-buf-lint | boolean | true |
 
+## Third Party
+
+-   The [library_scripts.sh](./library_scripts.sh) file is a copy of one of the many present in the [devcontainers-contrib repository](https://github.com/devcontainers-contrib/features/).
 
 
 ---

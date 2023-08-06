@@ -6,6 +6,7 @@ This repository provides the following [Development Container](https://container
 
 | Feature | Version | Description |
 | ------- | ------- | ----------- |
+| [atlas](./src/atlas/README.md) | 1.0.0 | [Atlas](https://atlasgo.io) is a language-independent tool for managing and migrating database schemas using modern DevOps principles. |
 | [buf](./src/buf/README.md) | 1.0.0 | The Buf CLI enables building and management of Protobuf APIs |
 
 ## Usage
@@ -16,6 +17,7 @@ To use this features, add them in your `devcontainer.json` as in the example bel
 {
     "image": "mcr.microsoft.com/devcontainers/base:debian",
     "features": {
+        "ghcr.io/marcozac/devcontainer-features/atlas:1": {},
         "ghcr.io/marcozac/devcontainer-features/buf:1": {}
     }
 }
@@ -27,6 +29,9 @@ As in the [`devcontainers/features`](https://github.com/devcontainers/features) 
 
 ```
 ├── src
+│   ├── atlas
+│   │   ├── devcontainer-feature.json
+│   │   └── install.sh
 │   ├── buf
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
