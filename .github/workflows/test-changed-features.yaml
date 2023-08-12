@@ -1,9 +1,11 @@
-name: 'CI - Test Features'
+name: 'CI - Test Changed Features'
 on:
   push:
     branches:
       - main
     paths:
+      - 'src/**'
+      - 'test/**'
       - '!**.md'
   pull_request:
     paths:
@@ -13,14 +15,26 @@ on:
   workflow_dispatch:
 
 jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      features: ${{ steps.filter.outputs.changes }}
+    steps:
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            atlas: ./**/atlas/**
+            buf: ./**/buf/**
+            shellcheck: ./**/shellcheck/**
+
   test:
+    needs: [detect-changes]
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
       matrix:
-        features:
-          - buf
-          - atlas
+        features: ${{ fromJSON(needs.detect-changes.outputs.features) }}
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
