@@ -1,6 +1,6 @@
 {
     "id": "gofumpt",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "name": "gofumpt (via Github Releases)",
     "description": "[gofumpt](https://github.com/mvdan/gofumpt) - A stricter gofmt.",
     "documentationURL": "https:/github.com/marcozac/devcontainer-features/tree/main/src/gofumpt",
