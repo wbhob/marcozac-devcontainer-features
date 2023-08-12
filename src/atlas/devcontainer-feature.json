@@ -1,6 +1,6 @@
 {
     "id": "atlas",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "name": "Atlas CLI",
     "description": "[Atlas](https://atlasgo.io) is a language-independent tool for managing and migrating database schemas using modern DevOps principles.",
     "documentationURL": "https://github.com/marcozac/devcontainer-features/tree/main/src/atlas",

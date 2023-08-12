@@ -29,5 +29,13 @@
         "communityEdition": false
       }
     }
+  },
+  "test_community_version_go": {
+    "image": "mcr.microsoft.com/devcontainers/go:1-bullseye",
+    "features": {
+      "atlas": {
+        "version": "v0.12.0"
+      }
+    }
   }
 }
