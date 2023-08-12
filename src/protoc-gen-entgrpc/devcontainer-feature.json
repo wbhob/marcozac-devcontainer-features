@@ -1,0 +1,20 @@
+{
+    "id": "protoc-gen-entgrpc",
+    "version": "1.0.0",
+    "name": "protoc-gen-entgrpc (from source)",
+    "description": "[protoc-gen-entgrpc](https://github.com/ent/contrib/tree/master/entproto) - A protoc plugin that generates server code that implements the gRPC interface that was generated from the ent schema.",
+    "documentationURL": "https:/github.com/marcozac/devcontainer-features/tree/main/src/protoc-gen-entgrpc",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter an protoc-gen-entgrpc version. Note: matches the tags in https://github.com/ent/contrib (mono) repo and may not include any changes to protoc-gen-entgrpc."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/go"
+    ]
+}
