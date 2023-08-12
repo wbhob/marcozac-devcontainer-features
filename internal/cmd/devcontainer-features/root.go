@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(newCmd)
+	rootCmd.AddCommand(newCmd, generateReadmeCmd)
 }
 
 func Execute() {
