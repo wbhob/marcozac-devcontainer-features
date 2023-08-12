@@ -1,0 +1,16 @@
+{
+  "test_defaults_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "shellcheck": {}
+    }
+  },
+  "test_version_debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "shellcheck": {
+        "version": "v0.8.0"
+      }
+    }
+  }
+}
