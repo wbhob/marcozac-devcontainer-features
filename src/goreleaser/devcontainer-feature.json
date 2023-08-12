@@ -1,0 +1,20 @@
+{
+    "id": "goreleaser",
+    "version": "1.0.0",
+    "name": "GoReleaser (via Github Releases)",
+    "description": "[GoReleaser](https://goreleaser.com/) - Release Go projects as fast and easily as possible!",
+    "documentationURL": "https:/github.com/marcozac/devcontainer-features/tree/main/src/goreleaser",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a GoReleaser version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/gh-release"
+    ]
+}

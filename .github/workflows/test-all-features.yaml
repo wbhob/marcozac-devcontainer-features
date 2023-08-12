@@ -12,6 +12,7 @@ jobs:
           - buf
           - atlas
           - gofumpt
+          - goreleaser
           - shellcheck
     steps:
       - name: 'Checkout'
