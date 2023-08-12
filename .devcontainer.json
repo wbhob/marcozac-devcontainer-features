@@ -1,5 +1,8 @@
 {
     "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+    "containerEnv": {
+        "REPO_SRC_URL": "https://github.com/marcozac/devcontainer-features/tree/main/src"
+    },
     "customizations": {
         "vscode": {
             "settings": {
