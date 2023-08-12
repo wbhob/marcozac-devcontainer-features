@@ -1,0 +1,16 @@
+{
+  "test_defaults_go": {
+    "image": "mcr.microsoft.com/devcontainers/go:1-bullseye",
+    "features": {
+      "protoc-gen-entgrpc": {}
+    }
+  },
+  "test_version_go": {
+    "image": "mcr.microsoft.com/devcontainers/go:1-bullseye",
+    "features": {
+      "protoc-gen-entgrpc": {
+        "version": "v0.4.5"
+      }
+    }
+  }
+}

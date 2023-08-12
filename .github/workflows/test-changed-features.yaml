@@ -31,6 +31,7 @@ jobs:
             buf: ./**/buf/**
             gofumpt: ./**/gofumpt/**
             goreleaser: ./**/goreleaser/**
+            protoc-gen-entgrpc: ./**/protoc-gen-entgrpc/**
             shellcheck: ./**/shellcheck/**
 
   test:

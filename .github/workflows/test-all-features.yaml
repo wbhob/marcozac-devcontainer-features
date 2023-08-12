@@ -13,6 +13,7 @@ jobs:
           - atlas
           - gofumpt
           - goreleaser
+          - protoc-gen-entgrpc
           - shellcheck
     steps:
       - name: 'Checkout'
