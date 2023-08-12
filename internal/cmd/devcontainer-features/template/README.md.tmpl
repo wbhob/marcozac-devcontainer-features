@@ -7,7 +7,7 @@ This repository provides the following [Development Container](https://container
 | Feature | Version | Description |
 | ------- | ------- | ----------- |
 {{- range $feature := . }}
-| [{{ $feature.ID }}](./src/{{ $feature.ID }}/README.md) | {{ $feature.Version }} | {{ $feature.Description }} |
+| [{{ $feature.Name }}](./src/{{ $feature.ID }}/README.md) | {{ $feature.Version }} | {{ $feature.Description }} |
 {{- end }}
 
 ## Usage
