@@ -20,6 +20,9 @@ jobs:
     outputs:
       features: ${{ steps.filter.outputs.changes }}
     steps:
+      - if: (github.event_name != 'pull_request') && (github.event_name != 'pull_request_target')
+        name: 'Checkout'
+        uses: actions/checkout@v3
       - uses: dorny/paths-filter@v2
         id: filter
         with:
