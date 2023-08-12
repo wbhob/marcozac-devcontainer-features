@@ -1,6 +1,6 @@
 {
     "id": "shellcheck",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "name": "ShellCheck (via Github Releases)",
     "description": "[ShellCheck](https://github.com/koalaman/shellcheck) - A shell script static analysis tool.",
     "documentationURL": "https://github.com/marcozac/devcontainer-features/tree/main/src/shellcheck",
