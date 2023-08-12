@@ -30,6 +30,7 @@ jobs:
             atlas: ./**/atlas/**
             buf: ./**/buf/**
             gofumpt: ./**/gofumpt/**
+            goreleaser: ./**/goreleaser/**
             shellcheck: ./**/shellcheck/**
 
   test:
