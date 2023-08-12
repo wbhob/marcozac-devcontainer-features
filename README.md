@@ -7,7 +7,7 @@ This repository provides the following [Development Container](https://container
 | Feature | Version | Description |
 | ------- | ------- | ----------- |
 | [atlas](./src/atlas/README.md) | 1.0.3 | [Atlas](https://atlasgo.io) is a language-independent tool for managing and migrating database schemas using modern DevOps principles. |
-| [buf](./src/buf/README.md) | 1.0.0 | The Buf CLI enables building and management of Protobuf APIs |
+| [buf](./src/buf/README.md) | 1.0.0 | The [Buf CLI](https://buf.build/product/cli) enables building and management of Protobuf APIs. |
 | [gofumpt](./src/gofumpt/README.md) | 1.0.0 | [gofumpt](https://github.com/mvdan/gofumpt) - A stricter gofmt. |
 | [goreleaser](./src/goreleaser/README.md) | 1.0.0 | [GoReleaser](https://goreleaser.com/) - Release Go projects as fast and easily as possible! |
 | [protoc-gen-entgrpc](./src/protoc-gen-entgrpc/README.md) | 1.0.0 | [protoc-gen-entgrpc](https://github.com/ent/contrib/tree/master/entproto) - A protoc plugin that generates server code that implements the gRPC interface that was generated from the ent schema. |

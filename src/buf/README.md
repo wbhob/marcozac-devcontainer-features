@@ -1,7 +1,7 @@
 
 # Buf CLI (via Github Releases) (buf)
 
-The Buf CLI enables building and management of Protobuf APIs
+The [Buf CLI](https://buf.build/product/cli) enables building and management of Protobuf APIs.
 
 ## Example Usage
 
