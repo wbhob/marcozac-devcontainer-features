@@ -1,5 +1,8 @@
 {
     "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+    "containerEnv": {
+        "REPO_SRC_URL": "https://github.com/marcozac/devcontainer-features/tree/main/src"
+    },
     "customizations": {
         "vscode": {
             "settings": {
@@ -13,13 +16,18 @@
                 ]
             },
             "extensions": [
-                "mads-hartmann.bash-ide-vscode"
+                "mads-hartmann.bash-ide-vscode",
+                "golang.go"
             ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.20"
+        }
     },
     "remoteUser": "node",
-    "updateContentCommand": "npm install -g @devcontainers/cli"
+    "updateContentCommand": "npm install -g @devcontainers/cli && go install -tags=\"go_json\" ./pkg/cmd/devcontainer-features",
+    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
