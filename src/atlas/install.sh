@@ -28,7 +28,7 @@ build_from_source() {
     local go_location
     go_location="$(which go 2>/dev/null)" || go_location="/usr/local/go/bin/go" && ($go_location version >/dev/null 2>&1 || install_go)
     $go_location install "ariga.io/atlas/cmd/atlas@$ATLAS_VERSION"
-    mv "$(/usr/local/go/bin/go env GOPATH)/bin/atlas" /usr/local/bin
+    mv "$($go_location env GOPATH)/bin/atlas" /usr/local/bin
 }
 
 if [ "$COMMUNITY_EDITION" == "true" ]; then
