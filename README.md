@@ -8,6 +8,7 @@ This repository provides the following [Development Container](https://container
 | ------- | ------- | ----------- |
 | [atlas](./src/atlas/README.md) | 1.0.3 | [Atlas](https://atlasgo.io) is a language-independent tool for managing and migrating database schemas using modern DevOps principles. |
 | [buf](./src/buf/README.md) | 1.0.0 | The Buf CLI enables building and management of Protobuf APIs |
+| [gofumpt](./src/gofumpt/README.md) | 1.0.0 | [gofumpt](https://github.com/mvdan/gofumpt) - A stricter gofmt. |
 | [shellcheck](./src/shellcheck/README.md) | 1.0.0 | [ShellCheck](https://github.com/koalaman/shellcheck) - A shell script static analysis tool. |
 
 ## Usage
@@ -20,6 +21,7 @@ To use this features, add them in your `devcontainer.json` as in the example bel
     "features": {
         "ghcr.io/marcozac/devcontainer-features/atlas:1": {},
         "ghcr.io/marcozac/devcontainer-features/buf:1": {},
+        "ghcr.io/marcozac/devcontainer-features/gofumpt:1": {},
         "ghcr.io/marcozac/devcontainer-features/shellcheck:1": {}
     }
 }
@@ -35,6 +37,9 @@ As in the [`devcontainers/features`](https://github.com/devcontainers/features) 
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
 │   ├── buf
+│   │   ├── devcontainer-feature.json
+│   │   └── install.sh
+│   ├── gofumpt
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
 │   ├── shellcheck
