@@ -1,0 +1,20 @@
+{
+    "id": "shellcheck",
+    "version": "1.0.0",
+    "name": "ShellCheck (via Github Releases)",
+    "description": "[ShellCheck](https://github.com/koalaman/shellcheck) - A shell script static analysis tool.",
+    "documentationURL": "https://github.com/marcozac/devcontainer-features/tree/main/src/shellcheck",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a ShellCheck version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/gh-release"
+    ]
+}
