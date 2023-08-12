@@ -58,10 +58,10 @@ var newCmd = &cobra.Command{
 }
 
 func init() {
-	newCmd.Flags().String("name", "", "The name of the feature.")
+	newCmd.Flags().StringP("name", "n", "", "Required. The name of the feature.")
 	_ = newCmd.MarkFlagRequired("name")
 
-	newCmd.Flags().String("description", "", "The description of the feature.")
+	newCmd.Flags().StringP("description", "d", "", "The description of the feature.")
 	newCmd.Flags().String("src-dir", "./src", "The path to the src directory.")
 	newCmd.Flags().String("repo-src-url", os.Getenv("REPO_SRC_URL"), "The repository src directory URL. Uses 'REPO_SRC_URL' env var as default value.\n\tE.g. https://github.com/marcozac/devcontainer-features/tree/main/src\n")
 }

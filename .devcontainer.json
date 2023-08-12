@@ -28,6 +28,6 @@
         }
     },
     "remoteUser": "node",
-    "updateContentCommand": "npm install -g @devcontainers/cli",
+    "updateContentCommand": "npm install -g @devcontainers/cli && go install -tags=\"go_json\" ./pkg/cmd/devcontainer-features",
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
