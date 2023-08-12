@@ -29,6 +29,7 @@ jobs:
           filters: |
             atlas: ./**/atlas/**
             buf: ./**/buf/**
+            gofumpt: ./**/gofumpt/**
             shellcheck: ./**/shellcheck/**
 
   test:

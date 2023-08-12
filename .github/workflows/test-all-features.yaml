@@ -11,6 +11,7 @@ jobs:
         features:
           - buf
           - atlas
+          - gofumpt
           - shellcheck
     steps:
       - name: 'Checkout'

@@ -1,0 +1,20 @@
+{
+    "id": "gofumpt",
+    "version": "0.0.0",
+    "name": "gofumpt (via Github Releases)",
+    "description": "[gofumpt](https://github.com/mvdan/gofumpt) - A stricter gofmt.",
+    "documentationURL": "https:/github.com/marcozac/devcontainer-features/tree/main/src/gofumpt",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a gofumpt version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/gh-release"
+    ]
+}
