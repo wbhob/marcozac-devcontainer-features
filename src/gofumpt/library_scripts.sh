@@ -2,7 +2,7 @@
 
 # MIT License
 # 
-# Copyright (c) 2022 devcontainers-contrib
+# Copyright (c) 2022 devcontainers-extra
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -179,7 +179,7 @@ ensure_nanolayer() {
             tar_filename=nanolayer-"$(uname -m)"-unknown-linux-$clib_type.tgz
 
             # clean download will minimize leftover in case a downloaderlike wget or curl need to be installed
-            clean_download https://github.com/devcontainers-contrib/cli/releases/download/$required_version/$tar_filename $tmp_dir/$tar_filename
+            clean_download https://github.com/devcontainers-extra/cli/releases/download/$required_version/$tar_filename $tmp_dir/$tar_filename
             
             tar xfzv $tmp_dir/$tar_filename -C "$tmp_dir"
             chmod a+x $tmp_dir/nanolayer
